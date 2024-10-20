@@ -5,9 +5,57 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgba(170, 215, 215, 0.68);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+   
+}
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 80px);
+  grid-template-rows: repeat(5, 80px);
+  gap: 10px;
+}
+
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  background-color: lightgray;
+  border: 1px solid black;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+  
+}
+
+.square.player1-collapse {
+  background-color: lightblue;
+}
+
+.square.player2-collapse {
+  background-color: lightcoral;
+}
+
+.square:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  background-color: rgb(197, 190, 190);
+}
+.player-info{
+  margin-top: 30px;
+  text-align: center;
+  font-size: large;
+  font-family:'Times New Roman', Times, serif;
+
 }
